@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kalkulator Umur</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 700px;
+                width: 100%;
+            }
+
+            .container {
+                margin-left: -30px;
+                width: 250px;
+            }
+
+            .calculator {
+                background-color: blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column;
+                width: 100%;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            input[type="date"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+            #result {
+                margin-top: 10px;
+            }
+
+            #back-btn {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                color: #007bff;
+                text-decoration: none;
+            }
+
+            #back-btn:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="calculator">
+                <h2>Kalkulator Umur</h2>
+                <input type="date" id="birthdate" placeholder="Tanggal Lahir" />
+                <button onclick="calculateAge()">Hitung</button>
+                <div id="result"></div>
+                <a href="../index.html" id="back-btn">Kembali</a>
+            </div>
+        </div>
+
+        <script>
+            function calculateAge() {
+                var birthdate = new Date(
+                    document.getElementById("birthdate").value
+                );
+                var today = new Date();
+                var age = today.getFullYear() - birthdate.getFullYear();
+                var month = today.getMonth() - birthdate.getMonth();
+                if (
+                    month < 0 ||
+                    (month === 0 && today.getDate() < birthdate.getDate())
+                ) {
+                    age--;
+                }
+                document.getElementById("result").innerHTML =
+                    "Umur Anda adalah " + age + " tahun.";
+            }
+        </script>
+    </body>
+</html>
