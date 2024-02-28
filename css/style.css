@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../assets/image/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-flow: column;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    overflow: auto;
+    height: 200px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 8px 0 lightblue;
+}
+
+.music {
+    display: flex;
+    height: 150px;
+    width: 348px;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+ul {
+    display: flex;
+}
+
+.head li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.liSong {
+    font-size: 13px;
+}
+
+ol {
+    list-style-type: none;
+}
+
+ol li {
+    margin: 5px;
+}
+
+main {
+    display: flex;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    overflow: auto;
+    height: 400px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 8px 0 lightblue;
+}
+
+.dad {
+    display: flex;
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 5px;
+    padding: 3px;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 0 lightblue;
+    overflow: auto;
+}
+
+.container {
+    display: flex;
+    flex: 2;
+}
+
+.box1 {
+    display: flex;
+    flex: 1.5;
+    flex-flow: column;
+}
+
+.box2 {
+    display: flex;
+    flex: 2;
+    flex-flow: column;
+}
+
+.time {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.inbox1 {
+    display: flex;
+    flex: 5;
+    overflow: auto;
+}
+
+.inbox2 {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+}
+
+h4 {
+    margin-top: 5px;
+    align-self: center;
+}
+
+.card + p {
+    align-self: center;
+}
+
+#bio {
+    padding: 5px;
+}
+
+#bio p {
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+.acvContainer,
+.appsContainer {
+    display: flex;
+    gap: 10em;
+    margin-top: 5px;
+    width: 200px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.acv,
+.apps {
+    padding: 0;
+    height: 135px;
+    flex: 0 0 195px;
+    scroll-snap-align: start;
+}
+
+.apps {
+    height: 160px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 0;
+}
+
+.acv + img {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Untuk modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 370px;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Gambar di dalam modal */
+.modal-content {
+    display: block;
+    margin-top: 50px;
+    margin-left: 40px;
+    width: auto; /* Ubah lebar menjadi auto */
+    max-width: 80%; /* Sesuaikan dengan kebutuhan */
+    max-height: 80%; /* Sesuaikan dengan kebutuhan */
+}
+
+/* Tombol penutup (x) */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inbox3 {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+}
+
+footer {
+    font-size: 12px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.mediaSosial {
+    margin: 8px;
+    display: flex;
+    gap: 1em;
+}
+
+.fa-brands {
+    font-size: 20px;
+    color:;
+}
